@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script>
+        // Challenge
+        var number = "12344567890";
+        try {
+            if (number.length != 10) {
+                throw ("Please enter a 10 digit number");
+            } else {
+                document.write(number);
+            }
+        } catch (e) {
+            alert("Error" + e);
+        } finally {
+            document.write("<br> Ok Done");
+        }
+    </script>
+</head>
+
+</html>

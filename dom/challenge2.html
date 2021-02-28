@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>
+        Challenge2
+    </title>
+</head>
+
+<body>
+    <label id="labelone" for="text">Input</label>
+    <input type="text" id="inp" placeholder="default Text">
+    <button id="btn" onclick="change()">Update</button>
+
+    <script>
+        function change() {
+            var x = document.getElementById("inp").value;
+            document.getElementById("labelone").innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>

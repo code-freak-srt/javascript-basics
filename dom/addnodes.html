@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>
+        Adding node
+    </title>
+</head>
+
+<body>
+    <div id="divone">
+        <p id="paraone">This is first paragraph</p>
+    </div>
+
+    <script>
+        var para = document.createElement("p");
+        var heading = document.createTextNode("Heading");
+        para.appendChild(heading);
+
+        var e = document.getElementById("divone");
+        e.appendChild(para);
+    </script>
+</body>
+
+</html>

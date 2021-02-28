@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        // create an object car and assign properties to it and change attribute of object
+        Car = {
+            name: "Toyota",
+            price: 2000,
+            color: "red",
+            state: "started"
+        };
+        // document.write(Car.name);
+        // car.name = "Maruti";
+        // document.write(Car.name);
+
+        // displays hi on click of a button
+        function display() {
+            document.write("Fuck You!");
+        }
+
+        // creating a car object with property called state and use js code to make the button change the state of the car
+        document.write(Car.state);
+
+        function change() {
+            Car.state = "stopped";
+            document.write(Car.state);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <button type="button" onclick="display()">Click here</button> -->
+    <button type="button" onclick="change()">change</button>
+</body>
+
+
+</html>
