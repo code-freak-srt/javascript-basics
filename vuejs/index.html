@@ -2,12 +2,34 @@
 
 <head>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="app">
-        {{ message }} {{ name }} The final price is {{ sellingPrice(200) }}
+        <!-- {{ message }} {{ name }} The final price is {{ sellingPrice(200) }} -->
 
+        <!-- data binding -->
+        <!-- <img style="height: 500px;" v-bind:src="path" alt=""> -->
+        <!-- <a target="_blank" v-bind:href="link">Learn More</a> -->
+
+        {{ temp }}
+        <button v-on:click.once="inc()">+</button>
+        <button v-on:click.once="dec()">-</button>
+        <input type="text" v-on:keyup="keypressed()">
+        <input type="text" v-model="message" name="" id=""> {{ message }}
+
+        <!-- Dynamic CSS classes -->
+        <div v-bind:class="{status:status}">
+            Hi there
+        </div>
+        <button v-on:click="status=!status">change</button>
+
+
+        <!-- Conditionals -->
+        <h1 v-if="gate">Gate Open</h1>
+        <h1 v-else-if="!gate">Gate Closed</h1>
+        <button v-on:click="gate=!gate">Open/Close</button>
     </div>
 
     <script type="text/javascript" src="index.js">
