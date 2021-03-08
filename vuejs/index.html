@@ -30,6 +30,19 @@
         <h1 v-if="gate">Gate Open</h1>
         <h1 v-else-if="!gate">Gate Closed</h1>
         <button v-on:click="gate=!gate">Open/Close</button>
+
+
+        <!-- Looping -->
+        <p v-for="student in students">{{student}}</p>
+        <p v-for="player in players">{{ player.name }} : {{player.score}}</p>
+    </div>
+    <!-- Multiple instances -->
+
+    <div id="demo">
+        {{ message }} {{ f1() }}
+        <mycomponent>
+
+        </mycomponent>
     </div>
 
     <script type="text/javascript" src="index.js">
