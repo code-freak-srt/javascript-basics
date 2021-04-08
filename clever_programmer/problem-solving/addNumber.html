@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addNumber</title>
+</head>
+
+<body>
+    <script>
+        // finding sum of two numbers
+        function addNumber(num1, num2) {
+            return num1 + num2;
+        }
+        document.write(addNumber(5, 9));
+        document.write("</br>");
+        // converting hour to seconds
+        function timeConversion(time) {
+            return time * 60 * 60;
+        }
+        document.write(timeConversion(1));
+
+        // converting age to seconds
+        function ageConversion(age) {
+            return (age * 12 * 30 * 24 * 60 * 60);
+        }
+        document.write("</br>");
+        document.write(ageConversion(21));
+        document.write("</br>");
+
+        // returning first item in array
+        let array = ['Hari', 'Tom', 'Dick', 'Harry'];
+
+        function getFirstItem(items) {
+            return items[0];
+        }
+        document.write(getFirstItem(array));
+
+        document.write("</br>");
+
+        // Labeling good movies and bad movies
+        movies = [1, 3, 6, 9, 12, 2];
+
+        function labelMovie(movie_rating) {
+            if (movie_rating >= 6) {
+                return document.write("Good Movie");
+            } else if (movie_rating < 6) {
+                return document.write("Bad Movie");
+            }
+        }
+        for (let i = 0; i < movies.length; i++) {
+            value = movies[i];
+            labelMovie(value);
+            document.write("</br>");
+        }
+
+        //check if a string is empty
+
+        function isEmptyString(some_string) {
+            if (some_string == "") {
+                return true;
+            } else {
+                return some_string;
+            }
+        }
+        console.log(isEmptyString("Sushil"));
+        console.log(isEmptyString(" "));
+
+        // finding minimum and maximum
+        function findMin(num) {
+            let min;
+            for (let i = 0; i < num.length - 1; i++) {
+                if (num[i] < num[i + 1]) {
+                    min = num[i];
+                } else {
+                    continue;
+                }
+            }
+            return min;
+        }
+
+        function findMax(num) {
+            let max;
+            for (let i = 0; i < num.length - 1; i++) {
+                if (num[i + 1] > num[i]) {
+                    max = num[i + 1];
+                } else {
+                    continue;
+                }
+            }
+            return max;
+        }
+        array = [2, 5, 4, 7, 1, 9, 3];
+        document.write(findMin(array));
+        document.write("</br>");
+        document.write(findMax(array));
+
+        // sorting ascending order
+        let numbers = [5, 12, 8, 6, 13, 2];
+
+        function sort(numbers) {
+            let data = 0;
+
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] > numbers[i + 1]) {
+                    data = numbers[i];
+                    numbers[i] = numbers[i + 1];
+                    numbers[i + 1] = data;
+                } else {
+                    continue;
+                }
+            }
+            return numbers;
+        }
+        document.write(sort(numbers));
+    </script>
+
+</body>
+
+</html>
