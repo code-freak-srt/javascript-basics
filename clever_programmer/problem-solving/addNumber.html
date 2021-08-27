@@ -15,6 +15,7 @@
         }
         document.write(addNumber(5, 9));
         document.write("</br>");
+
         // converting hour to seconds
         function timeConversion(time) {
             return time * 60 * 60;
@@ -100,20 +101,23 @@
         let numbers = [5, 12, 8, 6, 13, 2];
 
         function sort(numbers) {
-            let data = 0;
 
-            for (let i = 0; i < numbers.length; i++) {
-                if (numbers[i] > numbers[i + 1]) {
-                    data = numbers[i];
-                    numbers[i] = numbers[i + 1];
-                    numbers[i + 1] = data;
-                } else {
-                    continue;
+            for (let i = 0; i < numbers.length - 1; i++) {
+                let max_num = numbers[i];
+                let max_location = i;
+                for (let j = i; j < numbers.length; j++) {
+                    if (numbers[j] > max_num) {
+                        max_num = numbers[j];
+                        max_location = j;
+                    }
                 }
+                numbers[max_location] = numbers[i];
+                numbers[i] = max_num;
             }
-            return numbers;
+            return "sorted value is :" + numbers;
         }
-        document.write(sort(numbers));
+        document.write("</br>");
+        document.write(sort([5, 12, 8, 6, 13, 2]));
     </script>
 
 </body>
