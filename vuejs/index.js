@@ -1,24 +1,25 @@
 // creating vue Instance
-// var app = new Vue({
-//     el: '#app',
+var app = new Vue({
+    el: '#app',
 
-//     data: {
-//         message: "Vue is fun",
-//         name: "Sushil",
-//         price: '1000',
-//         path: 'http://wallpapersdsc.net/wp-content/uploads/2016/10/River-Images.jpg',
-//         link: 'http://www.wikipedia.com',
-//     },
-// creating Vue Methods
-//     methods: {
-//         sellingPrice: function(d) {
-//             cost = this.price - d;
-//             return cost;
-//         }
-//     }
+    data: {
+        message: "Vue is fun",
+        name: "Sushil",
+        price: '1000',
+        path: 'http://wallpapersdsc.net/wp-content/uploads/2016/10/River-Images.jpg',
+        link: 'http://www.wikipedia.com',
+        text: '',
+    },
+    // creating Vue Methods
+    methods: {
+        sellingPrice: function(d) {
+            cost = this.price - d;
+            return cost;
+        }
+    }
 
 
-// })
+})
 
 Vue.component('mycomponent', {
     template: '<p>This is my component {{ name }} -- {{ temp }} <button v-on:click="changetemp()">Change</button></p>',
@@ -66,7 +67,7 @@ var app = new Vue({
         dec: function() {
             this.temp--;
         },
-        keypressed: function() {
+        keyPressed: function() {
             console.log('key pressed');
         }
     }

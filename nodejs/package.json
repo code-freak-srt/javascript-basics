@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "this is a sample node package",
+  "main": "app.js",
+  "scripts": {
+    "test": "console.log(\"hello World\")",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "project"
+  ],
+  "author": "sushil",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -7,17 +7,20 @@
 
 <body>
     <div id="app">
-        <!-- {{ message }} {{ name }} The final price is {{ sellingPrice(200) }} -->
+        {{ message }} {{ name }} The final price is {{ sellingPrice(200) }}
 
         <!-- data binding -->
-        <!-- <img style="height: 500px;" v-bind:src="path" alt=""> -->
-        <!-- <a target="_blank" v-bind:href="link">Learn More</a> -->
+        <img style="height: 500px;" v-bind:src="path" alt="">
+        <a target="_blank" v-bind:href="link">Learn More</a>
 
+
+        <!-- Events and modifiers -->
         {{ temp }}
-        <button v-on:click.once="inc()">+</button>
-        <button v-on:click.once="dec()">-</button>
-        <input type="text" v-on:keyup="keypressed()">
-        <input type="text" v-model="message" name="" id=""> {{ message }}
+        <button v-on:click.once="inc">+</button>
+        <button v-on:click.once="dec">-</button>
+        <input type="text" v-on:keyup="keyPressed()">
+        <!-- Two way data binding -->
+        <input type="text" v-model="text" name="" id=""> {{ text }}
 
         <!-- Dynamic CSS classes -->
         <div v-bind:class="{status:status}">
